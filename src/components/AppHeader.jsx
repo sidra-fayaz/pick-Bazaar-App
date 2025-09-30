@@ -17,6 +17,7 @@ import Logo from "../assets/Logo.webp";
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import { greenBTN } from '../assets/style';
+import { NavLink } from 'react-router-dom';
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Contact'];
@@ -88,8 +89,23 @@ function AppHeader(props) {
                   {item}
                 </Button>
               ))} */}
-              <Button sx={{color: "#000"}}>Shop</Button>
-              <Button sx={{color:"#000"}}>Offer</Button>
+              <NavLink  className={({isActive }) =>
+                  isActive ? "text-[#019376] font-bold px-3" 
+                  : "text-green-500 px-3"
+                }
+                to="/shops"
+                >
+                Shop
+              </NavLink>
+              <NavLink 
+                className={({isActive }) =>
+                  isActive ? "text-[#019376] font-bold" : "text-green-500"
+                }
+                to = "/offers"
+                > 
+                Offers
+              </NavLink>
+              
               <Button sx={{color: "#000"}}>Contact</Button>
               <Button sx={{... greenBTN, marginRight:"20px"}}>Join</Button>
               <Button sx={greenBTN}>Become a Seller</Button>

@@ -4,17 +4,25 @@ import AppHeader from './components/AppHeader'
 import Products from './components/products'
 import HoverCart from './components/HoverCart'
 import  Box from '@mui/material/Box'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Layout from './components/Layout'
+import Home from './components/Home'
 
 function App() {
   return (
-    <Box className="relative">
-        <AppHeader/>  
-        <Products/>
-
-        <Box className="absolute right-0 top-1/2">
-        <HoverCart/>
-        </Box>
-    </Box>
+    <>
+      
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Layout />}>
+            <Route index element={<Home />}></Route>
+            <Route path='offer' element={<h1>offers</h1>}></Route>
+            <Route path='shops' element={<h1>shops</h1>}></Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+      
+    </>
   );
 }
 

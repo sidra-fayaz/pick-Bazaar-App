@@ -8,39 +8,45 @@ import clementines from "../assets/products/clementines.webp";
 
 export const ProductData=[
     {   
-        id:1,
-        img: Apples, 
+        id:1, 
         price: "1.60", 
-        productName:"Apples"
+        img: Apples,
+        productName:"Apples",
+        productImages:[],
     },
     {
         id:2,
         img: BabySpinach, 
         price: "1.80", 
-        productName:"BabySpinach"
+        productName:"BabySpinach",
+        productImages:[],
     }, 
     {
         id:3,
         img: blueberries, 
         price: "3.80", 
-        productName:"blueberries"
+        productName:"blueberries",
+        productImages:[],
     }, 
     {
         id:4,
         img: BrusselsSprouts, 
         price: "2.15", 
-        productName:"BrusselsSprouts"
+        productName:"BrusselsSprouts",
+        productImages:[],
     }, 
     {
         id:5,
         img: CelerySticks, 
         price: "2.10", 
-        productName:"CelerySticks"
+        productName:"CelerySticks",
+        productImages:[],
     }, 
     {
         id:6,
         img: clementines, 
         price: "3.40", 
-        productName:"clementines"
+        productName:"clementines",
+        productImages:[],
     }, 
 ];
