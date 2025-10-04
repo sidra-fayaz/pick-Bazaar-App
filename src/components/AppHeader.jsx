@@ -13,11 +13,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import Logo from "../assets/Logo.webp";
+import Logo from "../assets/products/Logo.webp";
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import { greenBTN } from '../assets/style';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Contact'];
@@ -35,7 +35,9 @@ function AppHeader(props) {
       {/* <Typography variant="h6" sx={{ my: 2 }}>
         MUI
       </Typography> */}
-      <img src={Logo}/>
+      <Link to ="/">
+        <img src={Logo}/>
+      </Link>
       <Divider />
       <List>
         {navItems.map((item) => (
@@ -67,14 +69,9 @@ function AppHeader(props) {
             >
               <MenuIcon />
             </IconButton>
-              <img src={Logo}/>
-            {/* <Typography
-              variant="h6"
-              component="div"
-              sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-            >
-              MUI
-            </Typography> */}
+              <Link to ="/">
+                <img src={Logo}/>
+              </Link>
 
               <Autocomplete
               disablePortal
@@ -84,14 +81,10 @@ function AppHeader(props) {
               />
           </Box>
             <Box className sx={{ display: { xs: 'none', sm: 'block' } }}>
-              {/* {navItems.map((item) => (
-                <Button key={item}>
-                  {item}
-                </Button>
-              ))} */}
+            
               <NavLink  className={({isActive }) =>
                   isActive ? "text-[#019376] font-bold px-3" 
-                  : "text-green-500 px-3"
+                  : "text-gray-500 px-3"
                 }
                 to="/shops"
                 >
@@ -99,9 +92,9 @@ function AppHeader(props) {
               </NavLink>
               <NavLink 
                 className={({isActive }) =>
-                  isActive ? "text-[#019376] font-bold" : "text-green-500"
+                  isActive ? "text-[#019376] font-bold" : "text-gray-500"
                 }
-                to = "/offers"
+                to = "/offer"
                 > 
                 Offers
               </NavLink>

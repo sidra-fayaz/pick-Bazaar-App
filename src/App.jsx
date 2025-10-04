@@ -7,6 +7,7 @@ import  Box from '@mui/material/Box'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from './components/Layout'
 import Home from './components/Home'
+import Register from './components/auth/Register'
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
             <Route path='offer' element={<h1>offers</h1>}></Route>
             <Route path='shops' element={<h1>shops</h1>}></Route>
           </Route>
+
+
+          <Route path='/register' element={<Register/>}></Route>
+
         </Routes>
       </BrowserRouter>
       
